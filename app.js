@@ -15,8 +15,14 @@ const sentimentoRoutes = require('./api/routes/sentimento');
 //         useUnifiedTopology: true
 //     })
 
+    // mongoose.connect(
+    //     'mongodb+srv://safra-sense:pass@safra-sense.amxfu.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+    //         useNewUrlParser: true,
+    //         useUnifiedTopology: true
+    //     })
+
     mongoose.connect(
-        'mongodb+srv://safra-sense:pass@safra-sense.amxfu.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+        'kamino.mongodb.umbler.com:38339', {
             useNewUrlParser: true,
             useUnifiedTopology: true
         })
