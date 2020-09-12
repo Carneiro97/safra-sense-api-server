@@ -7,10 +7,17 @@ const mongoose = require('mongoose'); // our database helper package
 const empresaRoutes = require('./api/routes/empresas');
 const sentimentoRoutes = require('./api/routes/sentimento');
 
+// mongoose.connect(
+//     'mongodb+srv://safra-sense:' +
+//     process.env.MONGO_ATLAS_PW +
+//     '@safra-sense.amxfu.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+//         useNewUrlParser: true,
+//         useUnifiedTopology: true
+//     })
+
+    mongoose.Promise =  global.Promise;
 mongoose.connect(
-    'mongodb+srv://safra-sense:' +
-    process.env.MONGO_ATLAS_PW +
-    '@safra-sense.amxfu.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+    'mongodb+srv://safra-sense:pass@safra-sense.amxfu.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority', {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
