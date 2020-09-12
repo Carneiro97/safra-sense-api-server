@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "A RESTful Node.js API for manipulating data from database to our AI application on Safra-Sense",
   "main": "index.js",
-  "client": "npm start --prefix client",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -25,12 +24,6 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "body-parser": "^1.19.0",
-    "core-util-is": "^1.0.2",
-    "express": "^4.17.1",
-    "heroku": "^7.42.13",
-    "mongoose": "^5.10.5",
-    "morgan": "^1.10.0",
     "nodemon": "^2.0.4"
   }
 }
