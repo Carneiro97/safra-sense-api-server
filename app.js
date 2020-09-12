@@ -22,7 +22,7 @@ const sentimentoRoutes = require('./api/routes/sentimento');
     //     })
 
     mongoose.connect(
-        'kamino.mongodb.umbler.com:38339', {
+        'mongodb://safra-sense-admi:safra-sens-pass@mongo_safra-sense:27017/<safra-sense>?retryWrites=true&w=majority', {
             useNewUrlParser: true,
             useUnifiedTopology: true
         })
