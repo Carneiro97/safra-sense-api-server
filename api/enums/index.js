@@ -1,4 +1,4 @@
-const SentimentoEnum = require('./SentimentoEnum');
+const SentimentoEnum = require('./sentimentoEnum');
 
 module.exports = {
     SentimentoEnum,
