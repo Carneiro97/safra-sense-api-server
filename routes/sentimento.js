@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const Empresa = require('../models/Empresa');
+const Empresa = require('./models/Empresa');
 
-const SentimentoEnum = require('../enums/SentimentoEnum');
+const SentimentoEnum = require('./enums/SentimentoEnum');
 
 
 // Get sentimento request
