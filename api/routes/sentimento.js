@@ -3,7 +3,7 @@ const router = express.Router();
 
 const Empresa = require('../models/empresa');
 
-const SentimentoEnum = require('../enums/SentimentoEnum');
+const SentimentoEnum = require('../enums/sentimentoEnum');
 
 
 // Get sentimento request
