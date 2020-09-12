@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A RESTful Node.js API for manipulating data from database to our AI application on Safra-Sense",
   "main": "index.js",
+  "client": "npm start --prefix client",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
