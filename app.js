@@ -4,8 +4,8 @@ const morgan = require('morgan'); // our terminal log package
 const bodyParser = require('body-parser'); // our data parsing helper package
 const mongoose = require('mongoose'); // our database helper package
 
-const empresaRoutes = require('./routes/empresas');
-const sentimentoRoutes = require('./routes/sentimento');
+const empresaRoutes = require('./api/routes/empresas');
+const sentimentoRoutes = require('./api/routes/sentimento');
 
 // mongoose.connect(
 //     'mongodb+srv://safra-sense:' +
