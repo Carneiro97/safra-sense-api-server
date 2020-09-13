@@ -38,8 +38,9 @@ router.get('/:codigoEmpresa', (req, res, next) => {
     })
 });
 
-// Get sentimentos from a company by period of time
-router.get('/data/:codigoEmpresa', (req, res, next) => {
+// Post sentimentos from a company by period of time
+// It is a post method since we have a body on our request and Python 3.8 does not handle get requests with body.
+router.post('/data/:codigoEmpresa', (req, res, next) => {
     const codigo = req.params.codigoEmpresa;
     const dataInicio = req.body.dataInicio;
     const dataFim = req.body.dataFim;
