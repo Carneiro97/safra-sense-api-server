@@ -3,6 +3,7 @@ const router = express.Router();
 const mongoose = require('mongoose');
 
 const Empresa = require('../models/empresa');
+const checkAuth = require('../middleware/check-auth');
 
 // Get Empresas request
 router.get('/', (empresas, res, next) => {
@@ -65,7 +66,7 @@ router.get('/:codigoEmpresa', (req, res, next) => {
 });
 
 // Post nova empresa request
-router.post('/', (req, res, next) => {
+router.post('/', checkAuth, (req, res, next) => {
     const empresa = new Empresa({
         _id: new mongoose.Types.ObjectId(),
         nome: req.body.nome,
@@ -93,7 +94,7 @@ router.post('/', (req, res, next) => {
 });
 
 // Post Nova notícia request
-router.post('/:codigoEmpresa/noticia', (req, res, next) => {
+router.post('/:codigoEmpresa/noticia', checkAuth, (req, res, next) => {
     const codigo = req.params.codigoEmpresa;
     var novaNoticia = req.body;
     Empresa
@@ -120,7 +121,7 @@ router.post('/:codigoEmpresa/noticia', (req, res, next) => {
 });
 
 // Delete empresa request
-router.delete('/:codigoEmpresa', (req, res, next) => {
+router.delete('/:codigoEmpresa', checkAuth, (req, res, next) => {
     const codigo = req.params.codigoEmpresa;
     Empresa.remove({ codigo: codigo })
         .exec()

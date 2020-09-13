@@ -3,12 +3,14 @@ const app = express();
 const morgan = require('morgan'); // our terminal log package
 const bodyParser = require('body-parser'); // our data parsing helper package
 const mongoose = require('mongoose'); // our database helper package
+require('dotenv').config();
 
 const empresaRoutes = require('./api/routes/empresas');
 const sentimentoRoutes = require('./api/routes/sentimento');
+const usuarioRoutes = require('./api/routes/usuario');
 
     mongoose.connect(
-        'mongodb+srv://safra-sense:pass@safra-sense.amxfu.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+        'mongodb+srv://' + process.env.MONGO_ATLAS_CRED + '@safra-sense.amxfu.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority', {
             useNewUrlParser: true,
             useUnifiedTopology: true
         })
@@ -34,6 +36,7 @@ app.use((req, res, next) => {
 
 app.use('/empresas', empresaRoutes)
 app.use('/sentimento', sentimentoRoutes)
+app.use('/usuario', usuarioRoutes)
 
 app.use((req, res, next) => {
     const error = new Error('Not found');

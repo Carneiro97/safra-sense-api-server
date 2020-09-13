@@ -4,6 +4,7 @@ const router = express.Router();
 const Empresa = require('../models/empresa');
 
 const SentimentoEnum = require('../enums/sentimentoEnum');
+const checkAuth = require('../middleware/check-auth');
 
 // Get all sentimentos from a company
 router.get('/:codigoEmpresa', (req, res, next) => {
