@@ -103,7 +103,6 @@ router.post("/signup", checkAuth, (req, res, next) => {
             usuario
               .save()
               .then((result) => {
-                console.log(result);
                 res.status(201).json({
                   message: "Usuário criado com sucesso!",
                 });
