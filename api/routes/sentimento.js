@@ -5,20 +5,6 @@ const Empresa = require('../models/empresa');
 
 const SentimentoEnum = require('../enums/sentimentoEnum');
 
-
-// Get sentimento request
-router.get('/', (req, res, next) => {
-            res.status(200).json({
-                sentimento: SentimentoEnum.returnName[Math.floor(Math.random() * 3)]
-            })
-        .catch(err => {
-            console.log(err),
-                res.status(500).json({
-                    error: err
-                });
-        });
-});
-
 // Get all sentimentos from a company
 router.get('/:codigoEmpresa', (req, res, next) => {
     const codigo = req.params.codigoEmpresa;
