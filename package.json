@@ -4,6 +4,7 @@
   "description": "A RESTful Node.js API for manipulating data from database to our AI application on Safra-Sense",
   "main": "app.js",
   "scripts": {
+    "prestart": "npm install bcrypt",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server"
   },
