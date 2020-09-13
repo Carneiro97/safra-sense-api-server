@@ -77,6 +77,7 @@ Content-Type: application/json
 }
 ```
 
+Para mais informações sobre nossas requests, faça o download de nossa Postman Collection que está no diretório **safra-sense-api-server**.
 
 # Estrutura de arquivos
 ### Safra-Sense/DB.API
